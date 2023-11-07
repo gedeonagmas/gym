@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/gym/app/v1",//this will be render api url + /gym/app/v1
+    baseUrl: "https://gym-q5zv.onrender.com/gym/app/v1",//this will be render api url + /gym/app/v1
   }),
   tagTypes: [
     "profile-info",
