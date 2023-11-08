@@ -56,6 +56,7 @@ exports.loginHandler = asyncCatch(async (req, res, next) => {
     return next(new AppError("Invalid user name or password", 404));
   const token = tokenGenerator(res, user._id);
 
+  res.header("Access-Control-Allow-Origin", "*");
   res.status(200).json({
     status: "success",
     message: "you are logged in successfully",
