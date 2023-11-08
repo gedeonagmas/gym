@@ -40,10 +40,6 @@ exports.signupHandler = asyncCatch(async (req, res, next) => {
 
 exports.loginHandler = asyncCatch(async (req, res, next) => {
   const { userName, password } = req.body;
-   res.header("Access-Control-Allow-Credentials", responseSettings.AccessControlAllowCredentials);
-    res.header("Access-Control-Allow-Origin",  responseSettings.AccessControlAllowOrigin);
-    res.header("Access-Control-Allow-Headers", (req.headers['access-control-request-headers']) ? req.headers['access-control-request-headers'] : "x-requested-with");
-    res.header("Access-Control-Allow-Methods", (req.headers['access-control-request-method']) ? req.headers['access-control-request-method'] : responseSettings.AccessControlAllowMethods);
   if (!userName || !password)
     return next(new AppError("provide email and password", 404));
   const user = await User.findOne({ userName }).select("+password");
