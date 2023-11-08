@@ -1,1 +1,1 @@
-{"rewrites":[{"source":"/(.*)","destination":"https://gym-six-lac.vercel.app"}]}
+{"rewrites":[{"source":"https://gym-six-lac.vercel.app/(.*)","destination":"https://gym-six-lac.vercel.app"}]}
