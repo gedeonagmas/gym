@@ -14,7 +14,7 @@ const { errorController } = require("./controller/errorController");
 
 app.use(express.json());
 
-app.use(cors({origin: '*'}));
+app.use(cors({origin: 'null'}));
 
 // app.use(cors());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
