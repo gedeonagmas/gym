@@ -11,6 +11,7 @@
       "src": "/(.*)",
       "dest": "./index.js",
       "methods": ["GET", "POST", "PUT", "DELETE", "PATCH"],
+      "origin":"https://gym-six-lac.vercel.app",
       "headers": {
         "Access-Control-Allow-Origin": "*"
       }
