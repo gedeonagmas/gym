@@ -13,7 +13,7 @@ const { errorController } = require("./controller/errorController");
 // });
 
 app.use(express.json());
-app.use(cors({origin:"https://gym-six-lac.vercel.app/",methods:["GET","POST","DELETE","PATCH","PUT"]}));
+app.use(cors({origin:"https://gym-six-lac.vercel.app",methods:["GET","POST","DELETE","PATCH","PUT"]}));
 // app.use(cors());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/gym/app/v1/", router);
