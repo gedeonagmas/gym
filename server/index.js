@@ -14,7 +14,13 @@ const { errorController } = require("./controller/errorController");
 
 app.use(express.json());
 
-app.use(cors({origin: 'null'}));
+app.use(cors({
+  'allowedHeaders': ['sessionId', 'Content-Type'],
+  'exposedHeaders': ['sessionId'],
+  'origin': '*',
+  'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  'preflightContinue': false
+}));
 
 // app.use(cors());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
