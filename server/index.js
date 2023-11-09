@@ -22,7 +22,7 @@ app.use(express.json());
 //   'preflightContinue': false
 // }));
 
-app.use(cors());
+app.use(cors({origin:"https://gym-six-lac.vercel.app"}));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/gym/app/v1/", router);
 
